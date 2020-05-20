@@ -53,7 +53,7 @@ async function defaultRoute (server, options) {
                 url: request.query.url,
                 responseType: 'stream',
                 headers: newheaders,
-                timeout: config.timeout
+                timeout: (config.timeout*1000)
             })
             .then(function (response) {
                 reply.code(200);
@@ -62,7 +62,13 @@ async function defaultRoute (server, options) {
                 reply.send(response.data);
             })
             .catch(function (error) {
-                reply.code(error.response.status).send({code:error.response.status,message:error.message});
+                if(error.response) {
+                    reply.code(error.response.status).send({code:error.response.status,message:error.message});
+                } else if(error.request) {
+                    reply.code(400).send({code:400,message:'Request failed!'});
+                } else {
+                    reply.code(500).send({code:500,message:error.message});
+                }
             });
 
         await reply;

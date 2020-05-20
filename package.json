@@ -1,0 +1,31 @@
+{
+  "name": "img-spoof-nodejs",
+  "version": "1.0.0",
+  "description": "This is a very simple and fast to get an image with spoofing referer [NodeJS].",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "fastify": "^2.14.1",
+    "md5": "^2.2.1",
+    "moment": "^2.26.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aalfiann/img-spoof-nodejs.git"
+  },
+  "keywords": [
+    "image-spoof",
+    "image-referer",
+    "spoof-referer"
+  ],
+  "author": "M ABD AZIZ ALFIAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aalfiann/img-spoof-nodejs/issues"
+  },
+  "homepage": "https://github.com/aalfiann/img-spoof-nodejs#readme"
+}

@@ -3,7 +3,7 @@ const config = {
     port: 3000,                 // Port Server (default is 3000)
     logger: true,               // Server Log (default is true)
     useWorker: true,            // Use CPU as worker (default is true)
-    timeout: 30,                // Timeout request to get image (default is 30)
+    timeout: 30,                // Timeout request to get image (default is 30 seconds)
 
     // CACHE
     maxage: 3600,               // Max age of cache before expires (default is 3600)

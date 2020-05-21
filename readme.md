@@ -1,15 +1,17 @@
 # img-spoof-nodejs
 
+[![Build Status](https://travis-ci.com/aalfiann/img-spoof-nodejs.svg?branch=master)](https://travis-ci.com/aalfiann/img-spoof-nodejs)
+[![Coverage Status](https://coveralls.io/repos/github/aalfiann/img-spoof-nodejs/badge.svg?branch=master)](https://coveralls.io/github/aalfiann/img-spoof-nodejs?branch=master)
 ![Version](https://img.shields.io/github/package-json/v/aalfiann/img-spoof-nodejs)
 ![GitHub](https://img.shields.io/github/license/aalfiann/img-spoof-nodejs)
 
-This is a very simple and fast to get an image with spoofing referer. Built with Fastify Framework.
+This is a very simple and fast to get an image with spoofing referer [NodeJS].
 
 ## Features
 - **Spoofing Image Referer**  
   You are able to get a protected remote image by spoofing it. 
 - **Very Fast**  
-  Built with Fastify (the fastest nodejs framework).
+  Built with Fastify Framework (the fastest nodejs framework).
 - **Efficient**  
   CPU clustered and using response stream.
 - **Shared Proxy Cache**  
@@ -46,7 +48,7 @@ This will GET image with spoofing referer.
     <head>
     </head>
     <body>
-        <img src="https://localhost:3000/?referer=https://manganelo.com&url=https://s7.mkklcdnv7.com/mangakakalot/l2/love_parameter/chapter_112_qa/1.jpg">
+        <img src="http://localhost:3000/?referer=https://manganelo.com&url=https://s7.mkklcdnv7.com/mangakakalot/l2/love_parameter/chapter_112_qa/1.jpg">
     </body>
 </html>
 ```

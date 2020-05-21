@@ -29,10 +29,11 @@ function App() {
         }
         
         if(request.query.url) {
-            request.query.referer = ((request.query.referer===undefined)?'':request.query.referer);
+            request.query.url = helper.rawurldecode(request.query.url);
+            request.query.referer = ((request.query.referer===undefined)?'':helper.rawurldecode(request.query.referer));
             request.query.mime = ((request.query.mime===undefined)?'':request.query.mime);
-            request.query._ = ((request.query._===undefined)?'':request.query._);
-            request.query.v = ((request.query.v===undefined)?'':request.query.v);
+            request.query._ = ((request.query._===undefined)?'':helper.rawurldecode(request.query._));
+            request.query.v = ((request.query.v===undefined)?'':helper.rawurldecode(request.query.v));
             var etag = '"'+md5(request.query.url+request.query.referer+request.query.mime+request.query._+request.query.v)+'"';
             if (request.headers['if-none-match'] == etag) {
                 return reply.code(304).send('');

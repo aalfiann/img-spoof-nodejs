@@ -1,6 +1,6 @@
 {
   "name": "img-spoof-nodejs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a very simple and fast to get an image with spoofing referer [NodeJS].",
   "main": "server.js",
   "dependencies": {

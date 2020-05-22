@@ -1,6 +1,6 @@
 {
   "name": "img-spoof-nodejs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a very simple and fast to get an image with spoofing referer [NodeJS].",
   "main": "server.js",
   "dependencies": {
@@ -13,10 +13,11 @@
     "coveralls": "^3.1.0",
     "mocha": "^7.1.2",
     "mocha-lcov-reporter": "^1.3.0",
-    "nyc": "^15.0.1"
+    "nyc": "^15.0.1",
+    "standard": "^14.3.4"
   },
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha",
+    "test": "standard && nyc --reporter=html --reporter=text mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {

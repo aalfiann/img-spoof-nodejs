@@ -1,8 +1,10 @@
 # img-spoof-nodejs
 
+![Version](https://img.shields.io/github/package-json/v/aalfiann/img-spoof-nodejs)
 [![Build Status](https://travis-ci.com/aalfiann/img-spoof-nodejs.svg?branch=master)](https://travis-ci.com/aalfiann/img-spoof-nodejs)
 [![Coverage Status](https://coveralls.io/repos/github/aalfiann/img-spoof-nodejs/badge.svg?branch=master)](https://coveralls.io/github/aalfiann/img-spoof-nodejs?branch=master)
-![Version](https://img.shields.io/github/package-json/v/aalfiann/img-spoof-nodejs)
+[![Known Vulnerabilities](https://snyk.io/test/github/aalfiann/img-spoof-nodejs/badge.svg)](https://snyk.io/test/github/aalfiann/img-spoof-nodejs)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![GitHub](https://img.shields.io/github/license/aalfiann/img-spoof-nodejs)
 
 This is a very simple and fast to get an image with spoofing referer [NodeJS].

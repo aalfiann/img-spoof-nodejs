@@ -7,8 +7,8 @@ const server = require('fastify')({
   logger: config.logger
 })
 
-function App () {
-  server.addHook('onRequest', (request, reply, done) => {
+const App = async () => {
+  server.addHook('onRequest', async (request, reply) => {
     if (request.raw.url === '/favicon.ico') {
       return reply.code(404).send()
     }
@@ -37,7 +37,6 @@ function App () {
         return reply.code(304).send('')
       }
       reply.header('Etag', etag)
-      done()
     } else {
       return reply.code(400).send({ code: 400, message: 'Wrong parameter! Parameter url is required.' })
     }

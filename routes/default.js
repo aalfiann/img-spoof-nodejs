@@ -16,7 +16,7 @@ async function defaultRoute (server, options) {
       mime = request.query.url.split('.').slice(-1).pop()
       if (!helper.inArray(listmime, mime)) {
         reply.code(400)
-        return reply.send({ code: '400', message: 'Can\'t detect mime type or maybe was not supported! Please use parameter mime.' })
+        return reply.send({ code: 400, message: 'Can\'t detect mime type or maybe was not supported! Please use parameter mime.' })
       }
     }
 
@@ -35,7 +35,7 @@ async function defaultRoute (server, options) {
     }
 
     var resheaders = {
-      'Cache-Control': 'public, must-revalidate, maxage=' + config.maxage,
+      'Cache-Control': 'public, must-revalidate, max-age=' + config.maxage,
       'Content-Type': 'image/' + mime,
       Expires: moment().add(config.maxage, 'seconds').utc().format('ddd, DD MMM YYYY HH:mm:ss') + ' GMT',
       'Sec-Fetch-Dest': 'image',

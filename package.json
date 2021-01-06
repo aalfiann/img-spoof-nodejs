@@ -4,7 +4,7 @@
   "description": "This is a very simple and fast to get an image with spoofing referer [NodeJS].",
   "main": "server.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "fastify": "^3.4.1",
     "md5": "^2.2.1",
     "moment": "^2.26.0"
